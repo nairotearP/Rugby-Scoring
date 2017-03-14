@@ -1,3 +1,16 @@
 <resources>
     <string name="app_name">Rugby-Scoring</string>
+    <string name="home_text">home</string>
+    <string name="home_score">0</string>
+    <string name="visitor_text">visitor</string>
+    <string name="visitor_score">0</string>
+    <string name="five_points">+5</string>
+    <string name="two_points">+2</string>
+    <string name="three_points">+3</string>
+    <string name="five_point_text">try</string>
+    <string name="two_point_text">conversion \nkick</string>
+    <string name="three_point_text">penalty kick\nor drop goal</string>
+    <string name="undo">undo</string>
+    <string name="reset">reset</string>
+    <string name="font_size">18sp</string>
 </resources>

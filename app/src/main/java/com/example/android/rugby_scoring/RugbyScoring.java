@@ -1,24 +1,21 @@
 package com.example.android.rugby_scoring;
 
-        import android.os.Bundle;
-        import android.support.v7.app.AppCompatActivity;
-        import android.view.View;
-        import android.widget.TextView;
+
+import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 
 public class RugbyScoring extends AppCompatActivity {
 
-    int scoreTeamA = 0;
-    int scoreTeamB = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_rugby_scoring);
     }
-
+}
     /**
      * Displays the given score for Team A.
-     */
+     *
     public void displayForTeamA(int score) {
         TextView scoreView = (TextView) findViewById(R.id.team_a_score);
         scoreView.setText(String.valueOf(score));
@@ -46,7 +43,7 @@ public class RugbyScoring extends AppCompatActivity {
     }
     /**
      * Displays the given score for Team B.
-     */
+     *
     public void displayForTeamB(int score) {
         TextView scoreView = (TextView) findViewById(R.id.team_b_score);
         scoreView.setText(String.valueOf(score));
@@ -66,3 +63,4 @@ public class RugbyScoring extends AppCompatActivity {
         displayForTeamB(scoreTeamB);
     }
 }
+**/

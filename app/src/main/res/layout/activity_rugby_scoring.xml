@@ -1,146 +1,322 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-xmlns:tools="http://schemas.android.com/tools"
-android:id="@+id/activity_main"
-android:layout_width="match_parent"
-android:layout_height="match_parent"
-tools:context="com.example.android.rugby_scoring.RugbyScoring">
-
-<LinearLayout
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_rugby_scoring"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="horizontal">
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.android.rugby_scoring.RugbyScoring">
 
+    <!-- scoreboard area -->
     <LinearLayout
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:orientation="vertical">
+        android:orientation="horizontal">
 
-        <TextView
-            android:layout_width="match_parent"
+        <!--home column of scoreboard area -->
+        <LinearLayout
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:fontFamily="sans-serif-medium"
-            android:gravity="center_horizontal"
-            android:text="Team A"
-            android:textColor="#616161"
-            android:textSize="14sp" />
+            android:layout_weight="2"
+            android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/team_a_score"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="24dp"
-            android:layout_marginTop="16dp"
-            android:fontFamily="sans-serif-light"
-            android:gravity="center_horizontal"
-            android:text="0"
-            android:textColor="#000000"
-            android:textSize="56sp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:layout_marginTop="16dp"
+                android:fontFamily="sans-serif-medium"
+                android:gravity="center_horizontal"
+                android:text="@string/home_text"
+                android:textAllCaps="true"
+                android:textColor="#616161"
+                android:textSize="18sp" />
 
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="24dp"
-            android:layout_marginRight="24dp"
-            android:onClick="add3A"
-            android:text="+3 Points" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:layout_marginTop="12dp"
+                android:fontFamily="sans-serif-light"
+                android:gravity="center_horizontal"
+                android:text="@string/home_score"
+                android:textColor="#000000"
+                android:textSize="56sp" />
 
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="24dp"
-            android:layout_marginRight="24dp"
-            android:layout_marginTop="8dp"
-            android:onClick="add2A"
-            android:text="+2 Points" />
+        </LinearLayout>
 
-        <Button
-            android:layout_width="match_parent"
+        <!--middle column of scoreboard area -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="24dp"
+                android:scaleType="fitEnd"
+                android:src="@drawable/rugby_ball_transparent" />
+        </LinearLayout>
+
+        <!--visitor column of scoreboard area -->
+        <LinearLayout
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="24dp"
-            android:layout_marginRight="24dp"
-            android:layout_marginTop="8dp"
-            android:onClick="add1A"
-            android:text="Free Throw" />
+            android:layout_weight="2"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:layout_marginTop="16dp"
+                android:fontFamily="sans-serif-medium"
+                android:gravity="center_horizontal"
+                android:text="@string/visitor_text"
+                android:textAllCaps="true"
+                android:textColor="#616161"
+                android:textSize="18sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:layout_marginTop="12dp"
+                android:fontFamily="sans-serif-light"
+                android:gravity="center_horizontal"
+                android:text="@string/visitor_score"
+                android:textColor="#000000"
+                android:textSize="56sp" />
+
+        </LinearLayout>
 
     </LinearLayout>
 
-    <View
-        android:layout_width="1dp"
-        android:layout_height="match_parent"
-        android:layout_marginTop="16dp"
-        android:background="@android:color/darker_gray" />
-
+    <!-- separator -->
     <LinearLayout
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/gradientright" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/gradientleft" />
+    </LinearLayout>
+
+    <!-- 5 point buttons area -->
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:orientation="vertical">
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="36dp"
+            android:layout_weight="1"
+            android:text="@string/five_points"
+            android:textColor="#FFFFFF"
+            android:textSize="@string/font_size"
+            android:background="@drawable/points_button"/>
 
         <TextView
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:fontFamily="sans-serif-medium"
+            android:layout_weight="2"
             android:gravity="center_horizontal"
-            android:text="Team B"
-            android:textColor="#616161"
-            android:textSize="14sp" />
-
-        <TextView
-            android:id="@+id/team_b_score"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="24dp"
-            android:layout_marginTop="16dp"
-            android:fontFamily="sans-serif-light"
-            android:gravity="center_horizontal"
-            android:text="0"
-            android:textColor="#000000"
-            android:textSize="56sp" />
+            android:text="@string/five_point_text"
+            android:textAllCaps="true"
+            android:textColor="#000000" />
 
         <Button
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="24dp"
-            android:layout_marginRight="24dp"
-            android:onClick="add3B"
-            android:text="+3 Points" />
-
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="24dp"
-            android:layout_marginRight="24dp"
-            android:layout_marginTop="8dp"
-            android:onClick="add2B"
-            android:text="+2 Points" />
-
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="24dp"
-            android:layout_marginRight="24dp"
-            android:layout_marginTop="8dp"
-            android:onClick="add1B"
-            android:text="Free Throw" />
+            android:layout_marginRight="36dp"
+            android:layout_weight="1"
+            android:text="@string/five_points"
+            android:textColor="#FFFFFF"
+            android:textSize="@string/font_size"
+            android:background="@drawable/points_button"/>
 
     </LinearLayout>
+
+    <!-- separator -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/gradientright" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/gradientleft" />
+    </LinearLayout>
+
+    <!-- 2 point buttons area -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="36dp"
+            android:layout_weight="1"
+            android:text="@string/two_points"
+            android:textColor="#FFFFFF"
+            android:textSize="@string/font_size"
+            android:background="@drawable/points_button"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="2"
+            android:gravity="center_horizontal"
+            android:text="@string/two_point_text"
+            android:textAllCaps="true"
+            android:textColor="#000000" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="36dp"
+            android:layout_weight="1"
+            android:text="@string/two_points"
+            android:textColor="#FFFFFF"
+            android:textSize="@string/font_size"
+            android:background="@drawable/points_button"/>
+
+    </LinearLayout>
+
+    <!-- separator -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/gradientright" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/gradientleft" />
+    </LinearLayout>
+
+    <!-- 3 point buttons area -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="36dp"
+            android:layout_weight="1"
+            android:text="@string/three_points"
+            android:textColor="#FFFFFF"
+            android:textSize="@string/font_size"
+            android:background="@drawable/points_button"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="2"
+            android:gravity="center_horizontal"
+            android:text="@string/three_point_text"
+            android:textAllCaps="true"
+            android:textColor="#000000" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="36dp"
+            android:layout_weight="1"
+            android:text="@string/three_points"
+            android:textColor="#FFFFFF"
+            android:textSize="@string/font_size"
+            android:background="@drawable/points_button"/>
+
+    </LinearLayout>
+
+    <!-- separator -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/gradientright" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/gradientleft" />
+    </LinearLayout>
+
+    <!-- undo button -->
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_marginTop="24dp"
+        android:textColor="#FFFFFF"
+        android:textSize="@string/font_size"
+        android:text="@string/undo"
+        android:background="@drawable/button_rounded_top"
+        android:layout_gravity="center_horizontal"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="24dp" />
+
+    <!-- reset button -->
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:textColor="#FFFFFF"
+        android:textSize="@string/font_size"
+        android:text="@string/reset"
+        android:background="@drawable/button_rounded_bottom"
+        android:layout_gravity="center_horizontal"/>
 
 </LinearLayout>
-
-<Button
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_alignParentBottom="true"
-    android:layout_centerHorizontal="true"
-    android:layout_marginBottom="32dp"
-    android:onClick="resetScore"
-    android:text="reset" />
-
-
-</RelativeLayout>
