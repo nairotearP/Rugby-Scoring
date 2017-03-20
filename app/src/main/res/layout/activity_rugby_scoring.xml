@@ -25,14 +25,14 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="12dp"
                 android:layout_marginTop="16dp"
                 android:fontFamily="sans-serif-medium"
                 android:gravity="center_horizontal"
                 android:text="@string/home_text"
                 android:textAllCaps="true"
-                android:textColor="#616161"
-                android:textSize="18sp" />
+                android:textColor="#000000"
+                android:textSize="24sp"
+                android:textStyle="bold" />
 
             <TextView
                 android:layout_width="match_parent"
@@ -43,7 +43,8 @@
                 android:gravity="center_horizontal"
                 android:text="@string/home_score"
                 android:textColor="#000000"
-                android:textSize="56sp" />
+                android:textSize="72sp"
+                android:textStyle="bold" />
 
         </LinearLayout>
 
@@ -56,9 +57,9 @@
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginBottom="24dp"
+                android:layout_marginBottom="36dp"
                 android:scaleType="fitEnd"
-                android:src="@drawable/rugby_ball_transparent" />
+                android:src="@drawable/rugby_ball_transparent_green_white" />
         </LinearLayout>
 
         <!--visitor column of scoreboard area -->
@@ -71,14 +72,15 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="12dp"
+
                 android:layout_marginTop="16dp"
                 android:fontFamily="sans-serif-medium"
                 android:gravity="center_horizontal"
                 android:text="@string/visitor_text"
                 android:textAllCaps="true"
-                android:textColor="#616161"
-                android:textSize="18sp" />
+                android:textColor="#000000"
+                android:textSize="24sp"
+                android:textStyle="bold" />
 
             <TextView
                 android:layout_width="match_parent"
@@ -89,7 +91,8 @@
                 android:gravity="center_horizontal"
                 android:text="@string/visitor_score"
                 android:textColor="#000000"
-                android:textSize="56sp" />
+                android:textSize="72sp"
+                android:textStyle="bold" />
 
         </LinearLayout>
 
@@ -127,10 +130,10 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="36dp"
             android:layout_weight="1"
+            android:background="@drawable/points_button"
             android:text="@string/five_points"
             android:textColor="#FFFFFF"
-            android:textSize="@string/font_size"
-            android:background="@drawable/points_button"/>
+            android:textSize="18sp" />
 
         <TextView
             android:layout_width="0dp"
@@ -139,17 +142,19 @@
             android:gravity="center_horizontal"
             android:text="@string/five_point_text"
             android:textAllCaps="true"
-            android:textColor="#000000" />
+            android:textColor="#33691E"
+            android:textSize="14sp"
+            android:textStyle="bold" />
 
         <Button
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginRight="36dp"
             android:layout_weight="1"
+            android:background="@drawable/points_button"
             android:text="@string/five_points"
             android:textColor="#FFFFFF"
-            android:textSize="@string/font_size"
-            android:background="@drawable/points_button"/>
+            android:textSize="18sp" />
 
     </LinearLayout>
 
@@ -185,10 +190,10 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="36dp"
             android:layout_weight="1"
+            android:background="@drawable/points_button"
             android:text="@string/two_points"
             android:textColor="#FFFFFF"
-            android:textSize="@string/font_size"
-            android:background="@drawable/points_button"/>
+            android:textSize="18sp" />
 
         <TextView
             android:layout_width="0dp"
@@ -198,17 +203,19 @@
             android:gravity="center_horizontal"
             android:text="@string/two_point_text"
             android:textAllCaps="true"
-            android:textColor="#000000" />
+            android:textColor="#33691E"
+            android:textSize="14sp"
+            android:textStyle="bold" />
 
         <Button
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginRight="36dp"
             android:layout_weight="1"
+            android:background="@drawable/points_button"
             android:text="@string/two_points"
             android:textColor="#FFFFFF"
-            android:textSize="@string/font_size"
-            android:background="@drawable/points_button"/>
+            android:textSize="18sp" />
 
     </LinearLayout>
 
@@ -244,10 +251,10 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="36dp"
             android:layout_weight="1"
+            android:background="@drawable/points_button"
             android:text="@string/three_points"
             android:textColor="#FFFFFF"
-            android:textSize="@string/font_size"
-            android:background="@drawable/points_button"/>
+            android:textSize="18sp" />
 
         <TextView
             android:layout_width="0dp"
@@ -257,17 +264,19 @@
             android:gravity="center_horizontal"
             android:text="@string/three_point_text"
             android:textAllCaps="true"
-            android:textColor="#000000" />
+            android:textColor="#33691E"
+            android:textSize="14sp"
+            android:textStyle="bold" />
 
         <Button
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginRight="36dp"
             android:layout_weight="1"
+            android:background="@drawable/points_button"
             android:text="@string/three_points"
             android:textColor="#FFFFFF"
-            android:textSize="@string/font_size"
-            android:background="@drawable/points_button"/>
+            android:textSize="18sp" />
 
     </LinearLayout>
 
@@ -296,27 +305,27 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:padding="10dp"
+        android:layout_gravity="center_horizontal"
         android:layout_marginTop="24dp"
-        android:textColor="#FFFFFF"
-        android:textSize="@string/font_size"
-        android:text="@string/undo"
         android:background="@drawable/button_rounded_top"
-        android:layout_gravity="center_horizontal"/>
+        android:padding="10dp"
+        android:text="@string/undo"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp" />
 
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="24dp" />
+        android:layout_height="18dp" />
 
     <!-- reset button -->
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:padding="10dp"
-        android:textColor="#FFFFFF"
-        android:textSize="@string/font_size"
-        android:text="@string/reset"
+        android:layout_gravity="center_horizontal"
         android:background="@drawable/button_rounded_bottom"
-        android:layout_gravity="center_horizontal"/>
+        android:padding="10dp"
+        android:text="@string/reset"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp" />
 
 </LinearLayout>

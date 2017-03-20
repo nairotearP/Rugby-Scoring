@@ -12,5 +12,4 @@
     <string name="three_point_text">penalty kick\nor drop goal</string>
     <string name="undo">undo</string>
     <string name="reset">reset</string>
-    <string name="font_size">18sp</string>
 </resources>
