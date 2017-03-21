@@ -35,13 +35,14 @@
                 android:textStyle="bold" />
 
             <TextView
+                android:id="@+id/home_score"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="12dp"
                 android:layout_marginTop="12dp"
                 android:fontFamily="sans-serif-light"
                 android:gravity="center_horizontal"
-                android:text="@string/home_score"
+                android:text="0"
                 android:textColor="#000000"
                 android:textSize="72sp"
                 android:textStyle="bold" />
@@ -72,7 +73,6 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-
                 android:layout_marginTop="16dp"
                 android:fontFamily="sans-serif-medium"
                 android:gravity="center_horizontal"
@@ -83,13 +83,14 @@
                 android:textStyle="bold" />
 
             <TextView
+                android:id="@+id/visitor_score"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="12dp"
                 android:layout_marginTop="12dp"
                 android:fontFamily="sans-serif-light"
                 android:gravity="center_horizontal"
-                android:text="@string/visitor_score"
+                android:text="0"
                 android:textColor="#000000"
                 android:textSize="72sp"
                 android:textStyle="bold" />
@@ -131,6 +132,7 @@
             android:layout_marginLeft="36dp"
             android:layout_weight="1"
             android:background="@drawable/points_button"
+            android:onClick="add5Home"
             android:text="@string/five_points"
             android:textColor="#FFFFFF"
             android:textSize="18sp" />
@@ -152,6 +154,7 @@
             android:layout_marginRight="36dp"
             android:layout_weight="1"
             android:background="@drawable/points_button"
+            android:onClick="add5Visitor"
             android:text="@string/five_points"
             android:textColor="#FFFFFF"
             android:textSize="18sp" />
@@ -191,6 +194,7 @@
             android:layout_marginLeft="36dp"
             android:layout_weight="1"
             android:background="@drawable/points_button"
+            android:onClick="add2Home"
             android:text="@string/two_points"
             android:textColor="#FFFFFF"
             android:textSize="18sp" />
@@ -213,6 +217,7 @@
             android:layout_marginRight="36dp"
             android:layout_weight="1"
             android:background="@drawable/points_button"
+            android:onClick="add2Visitor"
             android:text="@string/two_points"
             android:textColor="#FFFFFF"
             android:textSize="18sp" />
@@ -252,6 +257,7 @@
             android:layout_marginLeft="36dp"
             android:layout_weight="1"
             android:background="@drawable/points_button"
+            android:onClick="add3Home"
             android:text="@string/three_points"
             android:textColor="#FFFFFF"
             android:textSize="18sp" />
@@ -274,6 +280,7 @@
             android:layout_marginRight="36dp"
             android:layout_weight="1"
             android:background="@drawable/points_button"
+            android:onClick="add3Visitor"
             android:text="@string/three_points"
             android:textColor="#FFFFFF"
             android:textSize="18sp" />
@@ -301,13 +308,22 @@
             android:background="@drawable/gradientleft" />
     </LinearLayout>
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center_horizontal"
+        android:text="@string/undo_warning"
+        android:textSize="10dp" />
+
     <!-- undo button -->
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="12dp"
         android:background="@drawable/button_rounded_top"
+        android:onClick="undoScore"
         android:padding="10dp"
         android:text="@string/undo"
         android:textColor="#FFFFFF"
@@ -323,6 +339,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:background="@drawable/button_rounded_bottom"
+        android:onClick="resetScore"
         android:padding="10dp"
         android:text="@string/reset"
         android:textColor="#FFFFFF"
